@@ -1,0 +1,19 @@
+[package]
+name = "resource_server"
+version = "0.1.0"
+edition = "2021"
+authors = ["Dhananjay Senday <hello@dhananjaay.dev>"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1.37.0", features = ["full"] }
+axum = "0.7.5"
+sea-orm = { version = "0.12", features = [
+    "sqlx-postgres",
+    "runtime-tokio-rustls",
+    "macros",
+] }
+chrono = "0.4.35"
+dotenvy = "0.15.7"
+tower-http = { version = "0.5.2", features = ["cors"] }
